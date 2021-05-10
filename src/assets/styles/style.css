@@ -1,0 +1,70 @@
+@import url('./select.css');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: aliceblue;
+    --secondary-color: snow;
+    --tertiary-color: #07f;
+
+    --primary-font-color: #4f4f4f;
+
+    --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+img,
+svg {
+    display: block;
+}
+
+main {
+    padding: 0 1rem;
+}
+
+table {
+    min-width: 976px;
+}
+
+table,
+.p-paginator {
+    width: fit-content !important;
+    margin: auto;
+}
+
+th {
+    padding: 1rem 0.5rem !important;
+}
+
+.p-column-header-content {
+    justify-content: center;
+}
+
+tr:nth-child(even) {
+    background-color: var(--primary-color) !important;
+}
+
+tr:nth-child(odd) td {
+    padding: 0.9rem 0.5rem !important;
+}
+
+.alt-img {
+    border-radius: 50%;
+}
