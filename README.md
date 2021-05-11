@@ -1,4 +1,4 @@
-# coviddata-tracker
+# covid-data-tracker
 
 ## Project setup
 ```
