@@ -26,6 +26,7 @@ body {
 
 body {
     background-color: var(--secondary-color);
+    color: var(--primary-font-color);
     font-family: sans-serif;
     letter-spacing: 0.1rem;
 }
@@ -67,4 +68,12 @@ tr:nth-child(odd) td {
 
 .alt-img {
     border-radius: 50%;
+}
+
+.p-progressbar {
+    width: 100%;
+}
+
+.p-progressbar .p-progressbar-label {
+    line-height: 1.2 !important;
 }

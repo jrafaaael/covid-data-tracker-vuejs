@@ -77,7 +77,7 @@ nav {
     width: 100%;
     max-width: 500px;
     height: 10vh;
-    margin: 0 auto 1rem auto;
+    margin: auto;
     padding: 0 1rem;
     display: flex;
     justify-content: center;
