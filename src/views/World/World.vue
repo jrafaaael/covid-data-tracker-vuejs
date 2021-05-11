@@ -33,7 +33,7 @@
             >
             </info-card>
             <info-card 
-                title="Vaccine"
+                title="Vaccine doses coverage"
                 :data="[
                     { title: 'Total', value: lastVaccineUpdate },
                 ]"
