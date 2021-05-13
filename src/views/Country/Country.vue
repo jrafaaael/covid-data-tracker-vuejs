@@ -1,12 +1,15 @@
 <template>
     <main>
         <div class="title-container">
-            <h2 class="title">
-                {{ getCodeAndCountryName[1] }}
+            <skeleton v-if="loading" width="50%" height="40px" style="margin: .25rem"></skeleton>
+            <h2 v-else class="title">
+                {{ countryData.country }}
             </h2>
+            <skeleton v-if="loading" shape="circle" size="30px"></skeleton>
             <img
+                v-else
                 :src="
-                    `https://hatscripts.github.io/circle-flags/flags/${getCodeAndCountryName[0].toLowerCase()}.svg`
+                    `https://hatscripts.github.io/circle-flags/flags/${countryData.countryInfo.iso2.toLowerCase()}.svg`
                 "
                 alt=""
             />
@@ -97,9 +100,13 @@ export default {
                 ),
             ])
                 .then((value) => {
+                    if(
+                        code.toLowerCase() !== value.data.countryInfo.iso2.toLowerCase() ||
+                        ! name.includes(value.data.country)
+                    ) throw new Error();
                     this.countryData = value.data;
                 })
-                .catch((_) => this.$router.push("/404"));
+                .catch((_) => this.$router.push("/404")); // 
         },
         getVaccinationsData() {
             const [code, name] = this.getCodeAndCountryName;
